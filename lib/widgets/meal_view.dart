@@ -46,7 +46,7 @@ class MealItem extends StatelessWidget{
                     textAlign: TextAlign.center, 
                     softWrap: true, 
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                       color: Colors.white
@@ -58,9 +58,9 @@ class MealItem extends StatelessWidget{
                       children: [
                         MealItemTrait(icon: Icons.schedule, label: '${meal.duration} min'),
                         // MealItemTrait(icon: icon, label: label)
-                        SizedBox(width: 12,),
+                        const SizedBox(width: 12,),
                         MealItemTrait(icon: Icons.work, label: '$complexityText min'),
-                        SizedBox(width: 12,),
+                        const SizedBox(width: 12,),
                         MealItemTrait(icon: Icons.attach_money, label: '$affordiblityText')
                       ],
                     )

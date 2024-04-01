@@ -5,10 +5,11 @@ import 'package:meal_app/screens/categories.dart';
 import 'package:meal_app/screens/meals.dart';
 import 'package:meal_app/data/dummy_data.dart';
 import 'package:meal_app/screens/tabs.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
-  brightness: Brightness.dark,
+  // brightness: Brightness.dark,
   colorScheme: ColorScheme.fromSeed(
 
     seedColor: const Color.fromARGB(255, 131, 57, 0) 
@@ -17,7 +18,9 @@ final theme = ThemeData(
 );
 
 void main() {
-  runApp(const App());
+  runApp(const ProviderScope(
+    child: App(),
+  ));
 }
 
 
